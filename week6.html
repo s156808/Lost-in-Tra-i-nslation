@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 6 | Lost in Tra(i)nslation</title>
+  <meta name="description" content="Week 6: Finale oplossing en prototype." />
+  <link rel="stylesheet" href="css.css" />
+
+  <style>
+    /* Container voor de afbeeldingen */
+    .gallery-wrapper {
+      margin-top: 3rem;
+      width: 100%;
+    }
+
+    .gallery-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #fff; /* Белый цвет заголовка */
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Het grid voor de 5 schermen */
+    .screens-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    /* De losse kaartjes */
+    .screen-card {
+      flex: 0 0 180px; /* Basis breedte voor mobiele screenshots */
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+      border: 1px solid #eee;
+    }
+
+    .screen-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Hover effect */
+    .screen-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+
+    /* Creatieve twist: Op grotere schermen de even foto's iets laten zakken voor een speels effect */
+    @media (min-width: 768px) {
+      .screen-card:nth-child(even) {
+        margin-top: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap" id="top">
+
+    <header class="topbar">
+      <div class="brand">
+        <strong>PRTT1 Ontwerpdocumentatie</strong>
+        <span>
+          Student: <b id="studentName">Marianna Jendoubi</b>
+          | Groep: <b id="studentGroup">1GDM2</b>
+        </span>
+      </div>
+
+      <nav class="nav" aria-label="Week navigatie">
+        <a class="chip" href="index.html">Home</a>
+        <a class="chip" href="week1.html">Week 1</a>
+        <a class="chip" href="week2.html">Week 2</a>
+        <a class="chip" href="week3.html">Week 3</a>
+        <a class="chip" href="week4.html">Week 4</a>
+        <a class="chip" href="week5.html">Week 5</a>
+        <a class="chip" href="week6.html" aria-current="page">Week 6</a>
+      </nav>
+
+      <div class="links">
+        <a class="btn" id="figmaLink" href="https://www.figma.com/design/DqrzF6PICrN4nFVceDy0m1/PRTT1-%E2%80%93-Lost-in-Tra-i-nslation-%E2%80%93-Fase-2-%E2%80%93-MariannaJ?node-id=0-1&t=debsFvFvO5wv5fk7-1" target="_blank" rel="noreferrer">
+          <span class="dot"></span> Figma prototype
+        </a>
+        <a class="btn" id="pdfLink" href="PRTTT1_Lost_in_Translation_Marianna_Jendoubi.pdf" target="_blank" rel="noreferrer">
+          <span class="dot" style="background:var(--accent2)"></span> PDF
+        </a>
+        <a class="btn" id="repoLink" href="#" target="_blank" rel="noreferrer" style="display:none">
+          <span class="dot"></span> GitHub
+        </a>
+      </div>
+    </header>
+
+    <section class="section" id="week6">
+      <div class="grid" style="grid-template-columns: 1fr;"> 
+        <div>
+          <h2 class="title">
+            <small>Week 6</small>
+            <strong>Finale oplossing en prototype</strong>
+          </h2>
+          <p class="lead">
+            Het eindresultaat is een klikbaar prototype waarin de flow echt te ervaren is.
+            Ik heb gekozen voor een interface die helder communiceert zonder extra stress te veroorzaken,
+            met een visuele taal die consistent blijft over alle schermen.
+          </p>
+
+          <div class="card" style="margin-top:14px; max-width: 600px;">
+            <h3>Links</h3>
+            <ul class="list">
+              <li>Figma prototype: <a href="https://www.figma.com/design/DqrzF6PICrN4nFVceDy0m1/PRTT1-%E2%80%93-Lost-in-Tra-i-nslation-%E2%80%93-Fase-2-%E2%80%93-MariannaJ?node-id=0-1&t=debsFvFvO5wv5fk7-1" target="_blank" rel="noreferrer">openen</a></li>
+              <li>PDF dossier: <a href="PRTTT1_Lost_in_Translation_Marianna_Jendoubi.pdf" target="_blank" rel="noreferrer">openen</a></li>
+              <li>GitHub repository: voeg toe zodra je repo klaar is</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-wrapper">
+        <h3 class="gallery-title">High Fidelity Schermen</h3>
+        
+        <div class="screens-grid">
+          <div class="screen-card">
+            <img src="img/week_6/week_6_1.png" alt="Vertrekkende treinen overzicht" loading="lazy" />
+          </div>
+          
+          <div class="screen-card">
+            <img src="img/week_6/week_6_2.png" alt="Zoek rit scherm" loading="lazy" />
+          </div>
+          
+          <div class="screen-card">
+            <img src="img/week_6/week_6_3.png" alt="Treindetail scherm" loading="lazy" />
+          </div>
+          
+          <div class="screen-card">
+            <img src="img/week_6/week_6_4.png" alt="Ticket kopen scherm" loading="lazy" />
+          </div>
+          
+          <div class="screen-card">
+            <img src="img/week_6/week_6_5.png" alt="Samenstelling scherm" loading="lazy" />
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        Laatste update: <span id="lastUpdate"></span>
+      </footer>
+    </section>
+
+  </div>
+
+  <script>
+    (function(){
+      const d = new Date();
+      const pad = (n) => String(n).padStart(2,"0");
+      document.getElementById("lastUpdate").textContent =
+        pad(d.getDate()) + "/" + pad(d.getMonth()+1) + "/" + d.getFullYear() +
+        " " + pad(d.getHours()) + ":" + pad(d.getMinutes());
+    })();
+  </script>
+</body>
+</html>

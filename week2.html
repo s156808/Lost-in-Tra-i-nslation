@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Week 2 | Lost in Tra(i)nslation</title>
+  <meta name="description" content="Week 2: Probleemstelling en structuurkeuze." />
+  <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+  <div class="wrap" id="top">
+
+    <header class="topbar">
+      <div class="brand">
+        <strong>PRTT1 Ontwerpdocumentatie</strong>
+        <span>
+          Student: <b id="studentName">Marianna Jendoubi</b>
+          | Groep: <b id="studentGroup">1GDM2</b>
+        </span>
+      </div>
+
+      <nav class="nav" aria-label="Week navigatie">
+        <a class="chip" href="index.html">Home</a>
+        <a class="chip" href="week1.html">Week 1</a>
+        <a class="chip" href="week2.html" aria-current="page">Week 2</a>
+        <a class="chip" href="week3.html">Week 3</a>
+        <a class="chip" href="week4.html">Week 4</a>
+        <a class="chip" href="week5.html">Week 5</a>
+        <a class="chip" href="week6.html">Week 6</a>
+      </nav>
+
+      <div class="links">
+        <a class="btn" id="figmaLink" href="https://www.figma.com/design/DqrzF6PICrN4nFVceDy0m1/PRTT1-%E2%80%93-Lost-in-Tra-i-nslation-%E2%80%93-Fase-2-%E2%80%93-MariannaJ?node-id=0-1&t=debsFvFvO5wv5fk7-1" target="_blank" rel="noreferrer">
+          <span class="dot"></span> Figma prototype
+        </a>
+        <a class="btn" id="pdfLink" href="PRTTT1_Lost_in_Translation_Marianna_Jendoubi.pdf" target="_blank" rel="noreferrer">
+          <span class="dot" style="background:var(--accent2)"></span> PDF
+        </a>
+        <a class="btn" id="repoLink" href="#" target="_blank" rel="noreferrer" style="display:none">
+          <span class="dot"></span> GitHub
+        </a>
+      </div>
+    </header>
+
+    <section class="section" id="week2">
+      <div class="grid">
+        <div>
+          <h2 class="title">
+            <small>Week 2</small>
+            <strong>Probleemstelling en structuurkeuze</strong>
+          </h2>
+          <p class="lead">
+            Ik koos bewust voor een indeling in station, platform en wagon.
+            Dat beperkt de cognitieve belasting, omdat de gebruiker niet alles tegelijk hoeft te verwerken.
+          </p>
+
+          <div class="card" style="margin-top:14px">
+            <h3>Belangrijkste beslissing</h3>
+            <ul class="list">
+              <li>Informatie wordt per situatie gefilterd, niet per databron</li>
+              <li>Prioriteit ligt bij leesbaarheid en volgorde, niet bij extra features</li>
+              <li>Kleur blijft rustig om stress niet te versterken</li>
+            </ul>
+          </div>
+        </div>
+
+        <img src="img/week_2.png" 
+             alt="Week 2 probleemstelling visual" 
+             style="position: sticky; top: 100px; border-radius: 24px; box-shadow: var(--shadow-card); max-height: 70vh; object-fit: cover; width: 100%;">
+      </div>
+
+      <footer>
+        Laatste update: <span id="lastUpdate"></span>
+      </footer>
+    </section>
+
+  </div>
+
+  <script>
+    (function(){
+      const d = new Date();
+      const pad = (n) => String(n).padStart(2,"0");
+      document.getElementById("lastUpdate").textContent =
+        pad(d.getDate()) + "/" + pad(d.getMonth()+1) + "/" + d.getFullYear() +
+        " " + pad(d.getHours()) + ":" + pad(d.getMinutes());
+    })();
+  </script>
+</body>
+</html>
